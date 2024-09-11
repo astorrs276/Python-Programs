@@ -7,8 +7,12 @@ output_list_reversed = []
 final = ""
 
 def convert_thousands():
+    length = ""
     for i in range (len(number_list_thousands)):
-        length = length + int(number_list_thousands[i])
+        length = length + number_list_thousands[i]
+    length = int(length)
+    for i in range (length):
+        output_list.append("M")
     
 
 def convert_hundreds():
@@ -26,7 +30,7 @@ def convert_hundreds():
         for i in range (int(reversed[2]) - 5):
             output_list.append("C")
 
-    if (reversed[2] >= 5):
+    if (reversed[2] >= 5 and reversed[2] != 9):
         output_list.append("D")
 
 def convert_tens():
@@ -44,7 +48,7 @@ def convert_tens():
         for i in range (int(reversed[1]) - 5):
             output_list.append("X")
 
-    if (reversed[1] >= 5):
+    if (reversed[1] >= 5 and reversed[1] != 9):
         output_list.append("L")
 
 def convert_ones():
@@ -62,7 +66,7 @@ def convert_ones():
         for i in range (int(reversed[0]) - 5):
             output_list.append("I")
 
-    if (reversed[0] >= 5):
+    if (reversed[0] >= 5 and reversed[0] != 9):
         output_list.append("V")
 
 
@@ -79,13 +83,11 @@ def main():
     number_list = [char for char in num]
     for i in range (len(number_list) - 1, -1, -1):
         reversed.append(number_list[i])
-    if (len(number_list) >= 5):
-        for i in range (0, len(number_list) - 3):
+    if (len(number_list) >= 4):
+        for i in range (len(number_list) - 3):
             number_list_thousands.append(number_list[i])
     for i in range (len(reversed)):
         reversed[i] = int(reversed[i])
-    for i in range (len(number_list_thousands)):
-        number_list_thousands[i] = int(number_list_thousands[i])
 
     if (len(reversed) >= 1):
         convert_ones()
