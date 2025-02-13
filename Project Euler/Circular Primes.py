@@ -4,7 +4,7 @@ count = 0
 primes = []
 circular = []
 
-with open("data/Primes Below 1 Million.csv") as file:
+with open("Project Euler/data/Primes Below 1 Million.csv") as file:
     csvReader = csv.reader(file)
     for line in csvReader:
         primes.extend(line)
