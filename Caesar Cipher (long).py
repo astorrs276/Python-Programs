@@ -58,7 +58,7 @@ def decrypt_message(message, shift=3):
 
 def main():
     word = input("Enter a word: ")
-    change = 3 #int(input("How much to shift? "))
+    change = int(input("How much to shift? "))
     encrypted = encrypt_message(word, change)
     print(encrypted)
     decrypted = decrypt_message(encrypted, change)
