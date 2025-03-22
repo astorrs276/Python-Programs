@@ -3,9 +3,24 @@ WELCOME TO RITSEC CTF - RS{z33p_z00p_l3ts_g0}
 
 Hashing:
 Alien Encryption 1 - RS{a_c0smic_adv3ntur3}
+Alien Encryption 2 = RS{l3ts_m!x_17_up}
 
 Forensics:
 ROPE - RS{s0rry_1_cu7_d0wn_4_tr33_t0_m4k3_th15_im4g3}
 
 Puzzles (misc):
 PUZZLES! 1 - RS{1_ju5t_ge7t1ng_s74rt3d}
+
+Cryptography:
+ALIEN ENCRYPTION 101 - RS{232190557692152706}
+
+Hashes:
+mars
+saturn94
+4neptune
+
+17JUPITER
+Mercury86
+plut0
+
+m1LkYw4y62
