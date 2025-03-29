@@ -17,10 +17,11 @@ decoded_flag = base64.b64decode(value).decode()
 flag_formats = [
 "picoCTF", # 0
 "THM", # 1
-"RS" # 2
+"RS", # 2
+"sillyCTF", # 3
 ]
 
-flag_format = flag_formats[0]
+flag_format = flag_formats[3]
 
 while (decoded_flag[0:len(flag_format) + 1] != flag_format + "{" and decoded_flag[-1] != "}"):
     count += 1
