@@ -69,8 +69,8 @@ def check_guess(guess):
 
 def main():
     global guess_record
-    parse_guess_list("data/accepted_input.txt")
-    parse_target_word_list("data/possible_solutions.txt")
+    parse_guess_list("Games/data/pydle_accepted_input.txt")
+    parse_target_word_list("Games/data/pydle_possible_solutions.txt")
     new_current_word()
     while True:
         guesses = 0
