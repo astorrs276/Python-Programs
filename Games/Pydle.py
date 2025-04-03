@@ -2,15 +2,18 @@
 import random
 
 target_word_set = set()
+target_word_list = []
 guess_set = set()
 current_word = ""
 guess_record = []
 
 
-def parse_word_list(filename):
+def parse_target_word_list(filename):
+    global target_word_list
     with open(filename) as file:
         for line in file:
             target_word_set.add(line.strip().lower())
+    target_word_list = list(target_word_set)
 
 
 def parse_guess_list(filename):
@@ -20,9 +23,8 @@ def parse_guess_list(filename):
 
 
 def new_current_word():
-    word_list = list(target_word_set)
     global current_word
-    current_word = word_list[random.randint(0, len(word_list) - 1)]
+    current_word = target_word_list.pop(random.randint(0, len(target_word_list) - 1))
 
 
 def print_letter(letter, color_index):
@@ -68,7 +70,7 @@ def check_guess(guess):
 def main():
     global guess_record
     parse_guess_list("data/accepted_input.txt")
-    parse_word_list("data/possible_solutions.txt")
+    parse_target_word_list("data/possible_solutions.txt")
     new_current_word()
     while True:
         guesses = 0
