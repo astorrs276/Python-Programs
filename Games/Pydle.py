@@ -92,7 +92,7 @@ def main():
                     print_all()
                     guesses += 1
         if guesses == 6:
-            print("You lost. The word was" + current_word)
+            print("You lost. The word was " + current_word)
 
         match input("Would you like to play again (y/n)? ").lower():
             case "y":
