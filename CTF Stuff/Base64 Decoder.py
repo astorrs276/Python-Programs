@@ -14,6 +14,8 @@ value = values[-1]
 count = 1
 decoded_flag = base64.b64decode(value).decode()
 
+single = True
+
 flag_formats = [
 "picoCTF", # 0
 "THM", # 1
@@ -21,11 +23,14 @@ flag_formats = [
 "sillyCTF", # 3
 ]
 
-flag_format = flag_formats[3]
+flag_format = flag_formats[0]
 
-while (decoded_flag[0:len(flag_format) + 1] != flag_format + "{" and decoded_flag[-1] != "}"):
-    count += 1
-    decoded_flag = base64.b64decode(decoded_flag).decode()
+if single:
+    print(decoded_flag)
+else:
+    while (decoded_flag[0:len(flag_format) + 1] != flag_format + "{" and decoded_flag[-1] != "}"):
+        count += 1
+        decoded_flag = base64.b64decode(decoded_flag).decode()
 
 print(count, ":", sep="")
 print(decoded_flag)
