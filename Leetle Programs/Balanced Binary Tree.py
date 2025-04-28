@@ -17,10 +17,10 @@ def solve(root):
         right_height = check_height(node.right)
         if right_height == -1:
             return -1
-                
+
         if abs(left_height - right_height) > 1:
             return -1
-             
+
         return max(left_height, right_height) + 1
-        
+
     return check_height(root) != -1
