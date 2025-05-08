@@ -1,7 +1,6 @@
 def solve(matrix):
     if not matrix or not matrix[0]:
         return []
-
     result = []
     while matrix:
         result += matrix.pop(0)

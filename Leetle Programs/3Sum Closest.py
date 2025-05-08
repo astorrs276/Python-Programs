@@ -1,4 +1,5 @@
 import itertools
+
 def solve(nums, target):
     closestSum = float('inf')
     for item in itertools.combinations(nums, 3):

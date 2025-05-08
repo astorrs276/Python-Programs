@@ -18,5 +18,3 @@ def solve(s, t):
         return s[-1]
     else:
         return t[-1]
-
-print(solve("cat", "cast"))

@@ -1,2 +1,2 @@
 def solve(nums):
-  return min(nums)
+    return min(nums)
