@@ -1,12 +1,2 @@
 def solve(n):
-    nums = []
-    for i in range(1, n + 1):
-        if i % 15 == 0:
-            nums.append("FizzBuzz")
-        elif i % 5 == 0:
-            nums.append("Buzz")
-        elif i % 3 == 0:
-            nums.append("Fizz")
-        else:
-            nums.append(i)
-    return nums
+    return ["FizzBuzz" if i % 15 == 0 else "Buzz" if i % 5 == 0 else "Fizz" if i % 3 == 0 else i for i in range(1, n + 1)]

@@ -1,16 +1,2 @@
 def solve(n):
-    newNum = 0
-    negative = False
-    if n < 0:
-        negative = True
-        n = -n
-    while n != 0:
-        newNum = newNum * 10 + n % 10
-        n = n // 10
-    if negative:
-        newNum = -newNum
-    if newNum < -2**31:
-        return 0
-    elif newNum > 2**31:
-        return 0
-    return newNum
+    return int(str(n)[::-1]) if n > 0 and int(str(n)[::-1]) <= 2 ** 31 - 1 else 0 if n > 31 else -int(str(-n)[::-1]) if -int(str(-n)[::-1]) >= -2 ** 31 else 0

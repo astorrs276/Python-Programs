@@ -1,8 +1,2 @@
 def solve(n):
-    if n <= 0:
-        return 1
-    else:
-        val = 1
-        for i in range(1, n + 1):
-            val *= i
-        return val
+    return 1 if n <= 1 else n * solve(n - 1)

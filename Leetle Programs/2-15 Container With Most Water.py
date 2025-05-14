@@ -1,8 +1,2 @@
 def solve(height):
-    max = 0
-    for i in range(len(height)):
-        for j in range(i + 1, len(height)):
-            val = (j - i) * (min(height[i], height[j]))
-            if val > max:
-                max = val
-    return max
+    return 0 if height == [] else max([max([0] + [(j - i) * (min(height[i], height[j])) for j in range(i + 1, len(height))])] for i in range(len(height)))[0]

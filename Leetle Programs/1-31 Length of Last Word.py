@@ -1,3 +1,2 @@
 def solve(s):
-    words = s.split()
-    return len(words[-1]) if len(words) > 0 else 0
+    return len(s.split()[-1]) if len(s.split()) > 0 else 0

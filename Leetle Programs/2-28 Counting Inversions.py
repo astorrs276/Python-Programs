@@ -1,7 +1,2 @@
 def solve(nums):
-    count = 0
-    for i in range(len(nums)):
-        for j in range(i + 1, len(nums)):
-            if nums[j] < nums[i]:
-                count += 1
-    return count
+    return sum([sum([1 if nums[j] < nums[i] else 0 for j in range(i + 1, len(nums))]) for i in range(len(nums))])

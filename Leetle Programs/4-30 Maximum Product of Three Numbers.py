@@ -1,6 +1,4 @@
-from itertools import combinations
+import itertools
+
 def solve(nums):
-    peak = 0
-    for combo in combinations(nums, 3):
-        peak = max(peak, combo[0] * combo[1] * combo[2])
-    return peak
+    return max([combo[0] * combo[1] * combo[2] for combo in itertools.combinations(nums, 3)])
