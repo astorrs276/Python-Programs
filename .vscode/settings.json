@@ -1,0 +1,11 @@
+{
+  "python.defaultInterpreterPath": "C:\\Users\\astor\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "python.analysis.extraPaths": [
+    "C:\\Users\\astor\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pwn",
+    "C:\\Users\\astor\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pwnlib"
+  ],
+  "python.analysis.autoSearchPaths": false,
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.indexing": true,
+  "python.analysis.diagnosticMode": "workspace"
+}
