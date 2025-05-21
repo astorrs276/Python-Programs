@@ -1,0 +1,2 @@
+def solve(word):
+    return all([65 <= ord(word[0]) <= 90] + [97 <= ord(char) <= 122 for char in word[1:]]) or all([65 <= ord(char) <= 90 for char in word]) or all([97 <= ord(char) <= 122 for char in word])
