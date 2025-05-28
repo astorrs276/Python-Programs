@@ -19,10 +19,6 @@ xandalist = [
     'Get Xander to be genuinely wierded out by the term xandalizing',
 ]
 
-def xandler():
-    r = random.randint(0, len(xandalist) - 1)
-    return r
-
 def main():
     print(definition)
     print("Todo:")
@@ -33,7 +29,7 @@ def main():
         guypt2 = input('byebye? (y/n): ')
         if guypt2 == 'y':
             break
-        r = xandler()
+        r = random.randint(0, len(xandalist) - 1)
         print(xandalist[r])
         theguy = input('you complete this? (y/n): ')
         if theguy == 'y':
