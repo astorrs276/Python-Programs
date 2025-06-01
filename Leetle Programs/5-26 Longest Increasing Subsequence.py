@@ -1,4 +1,5 @@
 import itertools
+
 def solve(nums):
     peak = 0
     for i in range(1, len(nums) + 1):
