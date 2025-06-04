@@ -1,0 +1,20 @@
+Leetle Programs\2025\1-19 Binary Tree Maximum Depth.py
+Leetle Programs\2025\1-20 Reverse Linked List.py
+Leetle Programs\2025\2-18 Remove Nth Node From End of List.py
+Leetle Programs\2025\2-19 Invert a Binary Tree.py
+Leetle Programs\2025\2-21 Validate BST.py
+Leetle Programs\2025\2-3 Binary Tree Inorder Traversal.py
+Leetle Programs\2025\2-5 Single Linked List Middle.py
+Leetle Programs\2025\2-7 Balanced Binary Tree.py
+Leetle Programs\2025\3-12 Binary Tree Preorder Traversal.py
+Leetle Programs\2025\3-4 Reorder List.py
+Leetle Programs\2025\4-11 Rotate Linked List.py
+Leetle Programs\2025\4-12 Binary Tree Level Order Traversal.py
+Leetle Programs\2025\4-18 Sum of Left Leaves in a Binary Tree.py
+Leetle Programs\2025\5-12 Binary Tree Postorder Traversal.py
+Leetle Programs\2025\5-17 Delete Node in a Linked List.py
+Leetle Programs\2025\5-19 Sum Root to Leaf Numbers.py
+Leetle Programs\2025\5-22 Odd Even Linked List.py
+Leetle Programs\2025\5-5 Leaf Similar Trees.py
+Leetle Programs\2025\5-7 Swap Nodes in Pairs.py
+Leetle Programs\2025\5-8 Sum of Leaf Values.py
