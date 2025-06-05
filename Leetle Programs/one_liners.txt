@@ -68,3 +68,4 @@ Leetle Programs\2025\5-27 Subarray Sum Equals K.py
 Leetle Programs\2025\5-31 Find All Permutations of a String.py
 Leetle Programs\2025\5-9 Jewels and Stones.py
 Leetle Programs\2025\6-3 Product of Array Except Self.py
+Leetle Programs\2025\6-5 Find the Second Largest Number.py

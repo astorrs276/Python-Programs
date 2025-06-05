@@ -19,10 +19,10 @@ def analyze():
     for filename in filenames:
         with open(filename) as file:
             text = file.read()
-            if "import" in text:
-                imports.append(filename)
             if len(text.split("def solve")[1].split("\n")) == 2:
                 one_liners.append(filename)
+            if "import" in text:
+                imports.append(filename)
             if "class" in text:
                 classes.append(filename)
 
