@@ -1,9 +1,7 @@
-def xor_decrypt(ciphertext: bytes, key: bytes) -> bytes:
-    # Decrypts repeating key XOR ciphertext using the key
+def xor_decrypt(ciphertext, key):
     return bytes(c ^ key[i % len(key)] for i, c in enumerate(ciphertext))
 
-def recover_repeating_key(ciphertext: bytes, known_plaintext: bytes) -> bytes:
-    # Recovers the key by XORing plaintext and ciphertext
+def recover_repeating_key(ciphertext, known_plaintext):
     key_guess = bytes(c ^ p for c, p in zip(ciphertext[:len(known_plaintext)], known_plaintext))
     return key_guess
 
