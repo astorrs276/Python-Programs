@@ -1,0 +1,2 @@
+def solve(arr):
+	return False if (len(arr) < 3 or len(set(arr[:arr.index(max(arr))])) != len(arr[:arr. index(max(arr))]) or arr[0] > arr[1] or len(set(arr[arr.index(max(arr)):])) != len(arr[arr.index(max(arr)):]) or arr[-1] > arr[-2]) else all([True if (i <= arr.index(max(arr)) and arr[i - 1] < arr[i]) else False if (i <= arr.index(max(arr))) else True if (i > arr.index(max(arr)) and arr[i - 1] > arr[i]) else False for i in range(1, len(arr))])
