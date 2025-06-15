@@ -320,15 +320,15 @@ def main():
                 type = input("How does Mister X move (T/B/M/W)? ").upper()
                 endings = []
                 if type == "W":
-                    for start in move_list:
-                        for dict in [taxis, buses, metros, ferries]:
-                            if start in dict:
-                                endings.extend(dict[start])
-                else:
-                    dict = taxis if type == "T" else buses if type == "B" else metros
                     for start in move_list[-1]:
-                        if start in dict:
-                            endings.extend(dict[start])
+                        for moves in [taxis, buses, metros, ferries]:
+                            if start in moves:
+                                endings.extend(moves[start])
+                else:
+                    moves = taxis if type == "T" else buses if type == "B" else metros
+                    for start in move_list[-1]:
+                        if start in moves:
+                            endings.extend(moves[start])
                 move_list.append(sorted(list(set(endings[:]))))
                 print(move_list[-1])
             case "3":
