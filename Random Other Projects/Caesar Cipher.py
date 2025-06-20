@@ -1,3 +1,30 @@
+def encrypt(text, shift):
+    return "".join([chr((ord(char) - 65 + shift) % 26 + 65) if 65 <= ord(char) <= 90 else chr((ord(char) - 97 + shift) % 26 + 97) if 97 <= ord(char) <= 122 else char for char in text])
+
+def decrypt(text, shift):
+    return "".join([chr((ord(char) - 65 - shift) % 26 + 65) if 65 <= ord(char) <= 90 else chr((ord(char) - 97 - shift) % 26 + 97) if 97 <= ord(char) <= 122 else char for char in text])
+
+def brute_decrypt(text):
+    return "\n".join([decrypt(text, i) for i in range(26)])
+
+def main():
+    while True:
+        type = input("Encrypt or decrypt (q = quit)? ").lower()
+        if type == "q":
+            break
+        text = input("Enter the message: ")
+        shift = input("Enter the shift (leave blank for brute force decrypt): ")
+        print(encrypt(text, int(shift)) if type == "e" else brute_decrypt(text) if shift == "" else decrypt(text, int(shift)))
+        print()
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+# Original and much less efficient version
+'''
 def is_uppercase(character):
     pos = ord(character)
     if (pos >= 65 and pos <= 90):
@@ -66,3 +93,4 @@ def main():
 
 if (__name__ == "__main__"):
     main()
+'''
