@@ -1,17 +1,20 @@
-def get_fibonacci(x):
-    fib = [1, 1]
-    while fib[-1] + fib[-2] <= x:
-        fib.append(fib[-1] + fib[-2])
-    return fib
+fibonacci = [1, 1]
+
+def expand_fibonacci(x):
+    global fibonacci
+    while fibonacci[-1] + fibonacci[-2] <= x:
+        fibonacci.append(fibonacci[-1] + fibonacci[-2])
 
 def get_sum(x):
-    fib = get_fibonacci(x)
+    global fibonacci
+    if fibonacci[-1] + fibonacci[-2] <= x:
+        expand_fibonacci(x)
     result = []
     current = x
-    for i in range(len(fib) - 1, -1, -1):
-        if fib[i] <= current:
-            current -= fib[i]
-            result.append(fib[i])
+    for i in range(len(fibonacci) - 1, -1, -1):
+        if fibonacci[i] <= current:
+            current -= fibonacci[i]
+            result.append(fibonacci[i])
             if current == 0:
                 return result
 
