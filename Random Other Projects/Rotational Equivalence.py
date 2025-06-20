@@ -1,3 +1,22 @@
+def check(num1, num2):
+    return num2 in [num1[i:] + num1[:i] for i in range(len(num1))]
+
+def main():
+    while True:
+        val = input("Enter two numbers (q = quit): ")
+        if val == "q":
+            break
+        nums = val.split()
+        print(check(nums[0], nums[1]))
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+# Original and much less efficient version
+'''
 first = ""
 second = ""
 listed = []
@@ -40,3 +59,4 @@ def main():
     return rotated
 
 main()
+'''
