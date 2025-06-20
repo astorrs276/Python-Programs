@@ -1,3 +1,35 @@
+def get_fibonacci(x):
+    fib = [1, 1]
+    while fib[-1] + fib[-2] <= x:
+        fib.append(fib[-1] + fib[-2])
+    return fib
+
+def get_sum(x):
+    fib = get_fibonacci(x)
+    result = []
+    current = x
+    for i in range(len(fib) - 1, -1, -1):
+        if fib[i] <= current:
+            current -= fib[i]
+            result.append(fib[i])
+            if current == 0:
+                return result
+
+def main():
+    while True:
+        x = input("Enter a number (q = quit): ")
+        if x.lower() == "q":
+            break
+        print(get_sum(int(x)))
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+# Original and much less efficient version
+'''
 def findNumbers2(fibList, inp):
     numbers = []
     inp2 = inp
@@ -5,7 +37,7 @@ def findNumbers2(fibList, inp):
         if(inp == fibList[i]):
             numbers.append(inp)
             return numbers
-    
+
     while (inp2 > 0):
         for j in range(len(fibList)):
             if(inp2 == fibList[j]):
@@ -31,3 +63,4 @@ while(x > a):
     fibonacci.append(a)
 
 print(findNumbers2(fibonacci, x))
+'''
