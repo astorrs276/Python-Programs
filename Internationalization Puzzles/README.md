@@ -1,0 +1,1 @@
+My solutions to the internationalization puzzles created by Martijn van Iersel ([https://i18n-puzzles.com/](https://i18n-puzzles.com/))
