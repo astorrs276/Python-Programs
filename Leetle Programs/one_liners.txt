@@ -74,6 +74,10 @@ Leetle Programs\2025\6-14 Meeting Rooms.py
 Leetle Programs\2025\6-15 Shortest Word Distance.py
 Leetle Programs\2025\6-16 Palindromic Substrings.py
 Leetle Programs\2025\6-17 Largest Rectangle in Histogram.py
+Leetle Programs\2025\6-21 Remove Elements from Array.py
+Leetle Programs\2025\6-22 Check if Array is Arithmetic Progression.py
+Leetle Programs\2025\6-23 Valid Phone Number.py
+Leetle Programs\2025\6-24 Calculate Median of Array.py
 Leetle Programs\2025\6-3 Product of Array Except Self.py
 Leetle Programs\2025\6-5 Find the Second Largest Number.py
 Leetle Programs\2025\6-6 Check Number Sign.py

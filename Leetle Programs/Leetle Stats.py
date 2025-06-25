@@ -7,6 +7,7 @@ filenames = []
 one_liners = []
 imports = []
 classes = []
+other_functions = []
 
 def get_filenames():
     for path in paths:
@@ -25,6 +26,8 @@ def analyze():
                 imports.append(filename)
             if "class" in text:
                 classes.append(filename)
+            if "def check" in text:
+                other_functions.append(filename)
 
 def save():
     with open('Leetle Programs\\one_liners.txt', 'w') as file:
@@ -33,12 +36,15 @@ def save():
         file.write("\n".join(imports))
     with open('Leetle Programs\\classes.txt', 'w') as file:
         file.write("\n".join(classes))
+    with open('Leetle Programs\\other_functions.txt', 'w') as file:
+        file.write("\n".join(other_functions))
 
 def display():
     print("Total:", len(filenames))
     print("One-liners:", len(one_liners))
     print("Imports:", len(imports))
     print("Classes:", len(classes))
+    print("Other functions:", len(other_functions))
 
 def main():
     get_filenames()
