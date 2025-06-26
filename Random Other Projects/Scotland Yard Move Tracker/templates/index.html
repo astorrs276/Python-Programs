@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .input-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        .input-row input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            font-size: 16px;
+        }
+
+        .input-row button {
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scotland Yard Move Tracker</h1>
+    <h3 id="previous-header"><pre style="display: inline">Previous: {{ previous or '' }}</pre></h3>
+    <h3 id="current-header"><pre style="display: inline">Current: {{ current or '' }}</pre></h3>
+
+    <form method="POST">
+        <input type="hidden" name="previous_header" id="previous-hidden" value="{{ previous or '' }}">
+        <input type="hidden" name="current_header" id="current-hidden" value="{{ current or '' }}">
+
+        <!-- Input and right-side button -->
+        <div class="input-row">
+            <input type="text" name="text_field" value="{{ text or '' }}">
+            <button type="submit" name="button" value="Rewind">Rewind</button>
+        </div>
+
+        <div class="button-row">
+            <button type="submit" name="button" value="Taxi">Taxi</button>
+            <button type="submit" name="button" value="Bus">Bus</button>
+            <button type="submit" name="button" value="Metro">Metro</button>
+            <button type="submit" name="button" value="Mystery">Mystery</button>
+            <button type="submit" name="button" value="Revealed">Revealed</button>
+        </div>
+    </form>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function () {
+            const h3Text = document.getElementById("previous-header").innerText;
+            const justText = h3Text.replace(/^Previous:\s*/, "");
+            document.getElementById("previous-hidden").value = justText;
+        });
+    </script>
+</body>
+</html>

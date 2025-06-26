@@ -1,0 +1,58 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    margin-top: 100px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-row button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.button-row button:nth-child(1) {
+    background-color: #f6ec74; /* taxi */
+    color: black;
+}
+
+.button-row button:nth-child(2) {
+    background-color: #15adbe; /* bus */
+    color: black;
+}
+
+.button-row button:nth-child(3) {
+    background-color: #f15728; /* metro */
+    color: black;
+}
+
+.button-row button:nth-child(4) {
+    background-color: black; /* mystery */
+    color: white;
+}
+
+.button-row button:nth-child(5) {
+    background-color: #ffffff; /* revealed */
+    color: black;
+}
+
+.button-row button:hover {
+    opacity: 0.8;
+}
