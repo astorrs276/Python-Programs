@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 
 taxis = {
     1: [8, 9],
@@ -361,12 +361,13 @@ def cli():
         print()
 
 app = Flask(__name__)
+app.secret_key = "s3cr3tk3y"
 
-move_list = []
+# move_list = []
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    global move_list
+    move_list = session.get("move_list", [])
     input_text = ""
     updated_text = ""
     previous_header = "-1"
@@ -376,7 +377,7 @@ def home():
         button = request.form.get("button")
         if input_text != "":
 
-            move_list.append([val for val in input_text.split()] if input_text != "" else [])
+            move_list.append(sorted(list(set([val for val in input_text.split()] if input_text != "" else []))))
             endings = []
 
             # Handle each button
@@ -385,18 +386,21 @@ def home():
                 for start in move_list[-1]:
                     if int(start) in taxis:
                         endings.extend(taxis[int(start)])
+                endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Bus":
                 previous_header = "  ".join(move_list[-1])
                 for start in move_list[-1]:
                     if int(start) in buses:
                         endings.extend(buses[int(start)])
+                endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Metro":
                 previous_header = "  ".join(move_list[-1])
                 for start in move_list[-1]:
                     if int(start) in metros:
                         endings.extend(metros[int(start)])
+                endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Mystery":
                 previous_header = "  ".join(move_list[-1])
@@ -404,21 +408,27 @@ def home():
                     for moves in [taxis, buses, metros, ferries]:
                         if int(start) in moves:
                             endings.extend(moves[int(start)])
+                endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Revealed":
-                previous_header = ""
+                previous_header = "-1"
                 updated_text = ""
                 move_list = []
             elif button == "Rewind":
-                if len(move_list) > 1:
+                if len(move_list) > 0:
                     move_list.pop(-1)
-                    updated_text = "  ".join(move_list[-1])
-                    move_list.pop(-1)
-                    previous_header = "  ".join(move_list[-1]) if len(move_list) > 0 else ""
+                    updated_text = "  ".join(move_list[-1]) if len(move_list) > 0 else ""
+                    if len(move_list) > 0:
+                        move_list.pop(-1)
+                    previous_header = "  ".join(move_list[-1]) if len(move_list) > 0 else "-1"
+                else:
+                    updated_text = ""
+                    previous_header = "-1"
 
         if previous_header == "-1" and len(move_list) > 0:
             previous_header = "  ".join(move_list[-1])
 
+    session["move_list"] = move_list
     return render_template("index.html", text=updated_text, previous=previous_header, current = updated_text)
 
 if __name__ == "__main__":

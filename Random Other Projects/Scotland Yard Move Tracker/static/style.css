@@ -4,13 +4,27 @@ body {
     background-color: #222;
     color: white;
     margin-top: 100px;
+    zoom: 170%;
 }
 
-input[type="text"] {
+.wrapped-text {
+    display: inline-block;
+    white-space: pre-wrap;      /* preserves spaces + wraps */
+    word-wrap: break-word;      /* breaks long words if needed */
+    overflow-wrap: break-word;  /* newer alias for word-wrap */
+    max-width: 100%;            /* don’t overflow container */
+}
+
+textarea {
     padding: 10px;
-    width: 300px;
+    width: 100%;                  /* Responsive width */
+    max-width: 300px;             /* Optional fixed width */
     font-size: 16px;
     margin: 20px 0;
+    resize: vertical;             /* Let users resize height */
+    white-space: pre-wrap;        /* Wraps text and preserves spacing */
+    word-wrap: break-word;        /* Breaks long words */
+    overflow-wrap: break-word;
 }
 
 .button-row {
@@ -29,17 +43,17 @@ input[type="text"] {
 }
 
 .button-row button:nth-child(1) {
-    background-color: #f6ec74; /* taxi */
+    background-color: #d7ca26; /* taxi */
     color: black;
 }
 
 .button-row button:nth-child(2) {
-    background-color: #15adbe; /* bus */
+    background-color: #228da5; /* bus */
     color: black;
 }
 
 .button-row button:nth-child(3) {
-    background-color: #f15728; /* metro */
+    background-color: #ba3625; /* metro */
     color: black;
 }
 

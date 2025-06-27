@@ -27,8 +27,8 @@
 </head>
 <body>
     <h1>Scotland Yard Move Tracker</h1>
-    <h3 id="previous-header"><pre style="display: inline">Previous: {{ previous or '' }}</pre></h3>
-    <h3 id="current-header"><pre style="display: inline">Current: {{ current or '' }}</pre></h3>
+    <h3 id="previous-header">Previous: <span class="wrapped-text">{{ previous or '' }}</span></h3>
+    <h3 id="current-header">Current: <span class="wrapped-text">{{ current or '' }}</span></h3>
 
     <form method="POST">
         <input type="hidden" name="previous_header" id="previous-hidden" value="{{ previous or '' }}">
@@ -36,7 +36,7 @@
 
         <!-- Input and right-side button -->
         <div class="input-row">
-            <input type="text" name="text_field" value="{{ text or '' }}">
+            <textarea name="text_field" rows="4">{{ text or '' }}</textarea>
             <button type="submit" name="button" value="Rewind">Rewind</button>
         </div>
 
