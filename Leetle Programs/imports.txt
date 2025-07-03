@@ -7,4 +7,5 @@ Leetle Programs\2025\5-26 Longest Increasing Subsequence.py
 Leetle Programs\2025\5-31 Find All Permutations of a String.py
 Leetle Programs\2025\6-1 Longest Palindromic Subsequence.py
 Leetle Programs\2025\6-23 Valid Phone Number.py
+Leetle Programs\2025\6-29 Longest Common Subsequence Length.py
 Leetle Programs\2025\6-3 Product of Array Except Self.py

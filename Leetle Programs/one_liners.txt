@@ -78,8 +78,13 @@ Leetle Programs\2025\6-21 Remove Elements from Array.py
 Leetle Programs\2025\6-22 Check if Array is Arithmetic Progression.py
 Leetle Programs\2025\6-23 Valid Phone Number.py
 Leetle Programs\2025\6-24 Calculate Median of Array.py
+Leetle Programs\2025\6-27 Find Common Elements in Three Arrays.py
+Leetle Programs\2025\6-28 Valid IP Address.py
 Leetle Programs\2025\6-3 Product of Array Except Self.py
+Leetle Programs\2025\6-30 Find Sum of Even Numbers.py
 Leetle Programs\2025\6-5 Find the Second Largest Number.py
 Leetle Programs\2025\6-6 Check Number Sign.py
 Leetle Programs\2025\6-7 Find the Missing Letter.py
 Leetle Programs\2025\6-9 Find the Intersection Point.py
+Leetle Programs\2025\7-2 Remove Vowels From String.py
+Leetle Programs\2025\7-3 Find Second Smallest Number.py
