@@ -1,2 +1,2 @@
 def solve(s):
-    return "".join("".join("".join("".join("".join("".join("".join("".join("".join("".join("".join("".join(s.split("a")).split("A")).split("e")).split("E")).split("i")).split("I")).split("o")).split("O")).split("u"))).split("U")))
+    return "".join([char for char in s if char not in "aeiouAEIOU"])
