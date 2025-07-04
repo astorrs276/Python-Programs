@@ -12861,5 +12861,5 @@
 "chrysoprasus": 1,
 "transparent": 1,
 "proceeding": 1,
-"illuminate": 1,
+"illuminate": 1
 }
