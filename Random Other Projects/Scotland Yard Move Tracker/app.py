@@ -4,8 +4,6 @@ from move_lists import taxis, buses, metros, ferries
 app = Flask(__name__)
 app.secret_key = "s3cr3tk3y"
 
-# move_list = []
-
 @app.route("/", methods=["GET", "POST"])
 def home():
     move_list = session.get("move_list", [])
