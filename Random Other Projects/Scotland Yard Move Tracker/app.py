@@ -90,7 +90,7 @@ def home():
         button = request.form.get("button")
         if input_text != "":
 
-            move_list.append(sorted(list(set([val for val in input_text.split()] if input_text != "" else []))))
+            move_list.append(sorted(list(set(input_text.split()))))
             endings = []
 
             # Handle each button
