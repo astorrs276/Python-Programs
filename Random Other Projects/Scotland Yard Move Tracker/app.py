@@ -388,7 +388,7 @@ def home():
                         if int(start) in taxis:
                             endings.extend(taxis[int(start)])
                     except:
-                        pass
+                        return render_template("index.html", text="", previous="", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Bus":
@@ -398,7 +398,7 @@ def home():
                         if int(start) in buses:
                             endings.extend(buses[int(start)])
                     except:
-                        pass
+                        return render_template("index.html", text="", previous="", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Metro":
@@ -408,7 +408,7 @@ def home():
                         if int(start) in metros:
                             endings.extend(metros[int(start)])
                     except:
-                        pass
+                        return render_template("index.html", text="", previous="", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Mystery":
@@ -419,7 +419,7 @@ def home():
                             if int(start) in moves:
                                 endings.extend(moves[int(start)])
                         except:
-                            pass
+                            return render_template("index.html", text="", previous="", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Revealed":
@@ -441,7 +441,7 @@ def home():
             previous_header = "  ".join(move_list[-1])
 
     session["move_list"] = move_list
-    return render_template("index.html", text=updated_text, previous=previous_header, current = updated_text)
+    return render_template("index.html", text=updated_text, previous=previous_header, current=updated_text)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
