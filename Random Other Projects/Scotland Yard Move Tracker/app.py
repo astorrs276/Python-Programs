@@ -384,30 +384,42 @@ def home():
             if button == "Taxi":
                 previous_header = "  ".join(move_list[-1])
                 for start in move_list[-1]:
-                    if int(start) in taxis:
-                        endings.extend(taxis[int(start)])
+                    try:
+                        if int(start) in taxis:
+                            endings.extend(taxis[int(start)])
+                    except:
+                        pass
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Bus":
                 previous_header = "  ".join(move_list[-1])
                 for start in move_list[-1]:
-                    if int(start) in buses:
-                        endings.extend(buses[int(start)])
+                    try:
+                        if int(start) in buses:
+                            endings.extend(buses[int(start)])
+                    except:
+                        pass
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Metro":
                 previous_header = "  ".join(move_list[-1])
                 for start in move_list[-1]:
-                    if int(start) in metros:
-                        endings.extend(metros[int(start)])
+                    try:
+                        if int(start) in metros:
+                            endings.extend(metros[int(start)])
+                    except:
+                        pass
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Mystery":
                 previous_header = "  ".join(move_list[-1])
                 for start in move_list[-1]:
                     for moves in [taxis, buses, metros, ferries]:
-                        if int(start) in moves:
-                            endings.extend(moves[int(start)])
+                        try:
+                            if int(start) in moves:
+                                endings.extend(moves[int(start)])
+                        except:
+                            pass
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Revealed":
