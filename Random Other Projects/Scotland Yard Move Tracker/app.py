@@ -101,7 +101,7 @@ def home():
                         if int(start) in taxis:
                             endings.extend(taxis[int(start)])
                     except:
-                        return render_template("index.html", text="", previous="", current="")
+                        return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Bus":
