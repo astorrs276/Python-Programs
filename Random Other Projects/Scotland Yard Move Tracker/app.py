@@ -398,7 +398,7 @@ def home():
                         if int(start) in buses:
                             endings.extend(buses[int(start)])
                     except:
-                        return render_template("index.html", text="", previous="", current="")
+                        return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Metro":
@@ -408,7 +408,7 @@ def home():
                         if int(start) in metros:
                             endings.extend(metros[int(start)])
                     except:
-                        return render_template("index.html", text="", previous="", current="")
+                        return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Mystery":
@@ -419,7 +419,7 @@ def home():
                             if int(start) in moves:
                                 endings.extend(moves[int(start)])
                         except:
-                            return render_template("index.html", text="", previous="", current="")
+                            return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
             elif button == "Revealed":
