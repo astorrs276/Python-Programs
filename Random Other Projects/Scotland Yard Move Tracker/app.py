@@ -55,7 +55,7 @@ def cli():
                     spaces = [int(num) for num in input("What spaces to remove? ").split(" ")]
                     for space in spaces:
                         if space in move_list[-1]:
-                            move_list.remove(space)
+                            move_list[-1].remove(space)
                 else:
                     print("No moves")
             case "5":
@@ -64,7 +64,7 @@ def cli():
                 spaces = [int(num) for num in input("What spaces to add? ").split(" ")]
                 for space in spaces:
                     if space not in move_list[-1]:
-                        move_list.append(space)
+                        move_list[-1].append(space)
             case "6":
                 if len(move_list) > 1:
                     move_list.pop(-1)
@@ -100,7 +100,7 @@ def home():
                     try:
                         if int(start) in taxis:
                             endings.extend(taxis[int(start)])
-                    except:
+                    except ValueError:
                         return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
@@ -110,7 +110,7 @@ def home():
                     try:
                         if int(start) in buses:
                             endings.extend(buses[int(start)])
-                    except:
+                    except ValueError:
                         return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
@@ -120,7 +120,7 @@ def home():
                     try:
                         if int(start) in metros:
                             endings.extend(metros[int(start)])
-                    except:
+                    except ValueError:
                         return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
@@ -131,7 +131,7 @@ def home():
                         try:
                             if int(start) in moves:
                                 endings.extend(moves[int(start)])
-                        except:
+                        except ValueError:
                             return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
