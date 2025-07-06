@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, session
+import os
 from move_lists import taxis, buses, metros, ferries
 
 app = Flask(__name__)
-app.secret_key = "s3cr3tk3y"
+app.secret_key = os.urandom(24)
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -83,4 +84,4 @@ def home():
     return render_template("index.html", text=updated_text, previous=previous_header, current=updated_text)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
