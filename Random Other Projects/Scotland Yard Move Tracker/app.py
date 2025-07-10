@@ -28,6 +28,7 @@ def home():
                         if int(start) in taxis:
                             endings.extend(taxis[int(start)])
                     except ValueError:
+                        move_list = []
                         return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
@@ -38,6 +39,7 @@ def home():
                         if int(start) in buses:
                             endings.extend(buses[int(start)])
                     except ValueError:
+                        move_list = []
                         return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
@@ -48,6 +50,7 @@ def home():
                         if int(start) in metros:
                             endings.extend(metros[int(start)])
                     except ValueError:
+                        move_list = []
                         return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
@@ -59,6 +62,7 @@ def home():
                             if int(start) in moves:
                                 endings.extend(moves[int(start)])
                         except ValueError:
+                            move_list = []
                             return render_template("index.html", text="", previous="-1", current="")
                 endings = sorted(list(set(endings)))
                 updated_text = "  ".join([str(val) for val in endings])
