@@ -86,5 +86,20 @@ Leetle Programs\2025\6-5 Find the Second Largest Number.py
 Leetle Programs\2025\6-6 Check Number Sign.py
 Leetle Programs\2025\6-7 Find the Missing Letter.py
 Leetle Programs\2025\6-9 Find the Intersection Point.py
+Leetle Programs\2025\7-10 Find GCD of Two Numbers.py
+Leetle Programs\2025\7-11 Convert String to Title Case.py
+Leetle Programs\2025\7-12 Find Minimum in Array.py
+Leetle Programs\2025\7-13 Find Maximum Difference in Array.py
+Leetle Programs\2025\7-14 Calculate Factorial Iteratively.py
+Leetle Programs\2025\7-15 Find Index of Substring.py
+Leetle Programs\2025\7-16 Find First Non-Zero Element.py
+Leetle Programs\2025\7-17 Calculate Simple Interest.py
+Leetle Programs\2025\7-18 Convert Binary to Decimal.py
 Leetle Programs\2025\7-2 Remove Vowels From String.py
 Leetle Programs\2025\7-3 Find Second Smallest Number.py
+Leetle Programs\2025\7-4 Check if Array is Sorted.py
+Leetle Programs\2025\7-5 Calculate Average of Numbers.py
+Leetle Programs\2025\7-6 Count Character Occurences.py
+Leetle Programs\2025\7-7 Reverse List.py
+Leetle Programs\2025\7-8 Is String Numeric.py
+Leetle Programs\2025\7-9 Convert Seconds to HH MM SS.py
