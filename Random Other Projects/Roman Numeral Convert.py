@@ -19,6 +19,56 @@ def intToRoman(num):
     roman = "".join(['M' for _ in range(thousands)]) + roman
     return roman
 
+def romanToInt(roman):
+    num = 0
+    i = 0
+    while i < len(roman) - 1:
+        if roman[i] == "M":
+            num += 1000
+            i += 1
+        elif roman[i] == "D":
+            num += 500
+            i += 1
+        elif roman[i] == "C":
+            if roman[i + 1] == "M":
+                num += 900
+                i += 2
+            elif roman[i + 1] == "D":
+                num += 400
+                i += 2
+            else:
+                num += 100
+                i += 1
+        elif roman[i] == "L":
+            num += 50
+            i += 1
+        elif roman[i] == "X":
+            if roman[i + 1] == "C":
+                num += 90
+                i += 2
+            elif roman[i + 1] == "L":
+                num += 40
+                i += 2
+            else:
+                num += 10
+                i += 1
+        elif roman[i] == "V":
+            num += 5
+            i += 1
+        elif roman[i] == "I":
+            if roman[i + 1] == "X":
+                num += 9
+                i += 2
+            elif roman[i + 1] == "V":
+                num += 4
+                i += 2
+            else:
+                num += 1
+                i += 1
+    if i < len(roman):
+        num += 1
+    return num
+
 # Very inefficient code from original version
 '''
 num = 0
