@@ -1,0 +1,2 @@
+def solve(from_offset, time_str, to_offset):
+    return [f"{((int(time_str.split(':')[0]) + (to_offset - from_offset)) % 24):02}" + time_str[2:], -1 if int(time_str.split(":")[0]) + (to_offset - from_offset) < 0 else 1 if int(time_str.split(":")[0]) + (to_offset - from_offset) > 23 else 0]

@@ -1,0 +1,2 @@
+def solve(password):
+    return len(password) >= 8 and any(char in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" for char in password) and any(char in "abcdefghijklmnopqrstuvwxyz" for char in password) and any(char in "1234567890" for char in password) and any(char in "!@#$%^&*" for char in password)

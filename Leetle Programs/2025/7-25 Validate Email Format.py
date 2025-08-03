@@ -1,0 +1,2 @@
+def solve(email):
+    return ("@" in email and "." in email) and email.split("@")[0] != "" and email.split("@")[1].split(".")[0] != "" and email.split("@")[1].split(".")[1] != "" and all(char.lower() in "abcdefghijklmnopqrstuvwxyz" for char in email.split("@")[1].split(".")[-1]) and all(char.lower() in "abcdefghijklmnopqrstuvwxyz1234567890-@." for char in "".join(email.split(".")[:-1]))
