@@ -95,11 +95,24 @@ Leetle Programs\2025\7-15 Find Index of Substring.py
 Leetle Programs\2025\7-16 Find First Non-Zero Element.py
 Leetle Programs\2025\7-17 Calculate Simple Interest.py
 Leetle Programs\2025\7-18 Convert Binary to Decimal.py
+Leetle Programs\2025\7-19 Check if Number is Power of Three.py
 Leetle Programs\2025\7-2 Remove Vowels From String.py
+Leetle Programs\2025\7-20 Find Longest Word in String.py
+Leetle Programs\2025\7-21 Calculate Triangle Area.py
+Leetle Programs\2025\7-22 Remove Duplicates from String.py
+Leetle Programs\2025\7-23 Check if Number is Cube Root.py
+Leetle Programs\2025\7-25 Validate Email Format.py
+Leetle Programs\2025\7-26 Count Consonants in String.py
+Leetle Programs\2025\7-27 Hexadecimal to Decimal Conversion.py
+Leetle Programs\2025\7-28 Find Second Maximum Element.py
+Leetle Programs\2025\7-29 Generate Multiplication Table.py
 Leetle Programs\2025\7-3 Find Second Smallest Number.py
+Leetle Programs\2025\7-30 Password Strength Checker.py
 Leetle Programs\2025\7-4 Check if Array is Sorted.py
 Leetle Programs\2025\7-5 Calculate Average of Numbers.py
 Leetle Programs\2025\7-6 Count Character Occurences.py
 Leetle Programs\2025\7-7 Reverse List.py
 Leetle Programs\2025\7-8 Is String Numeric.py
 Leetle Programs\2025\7-9 Convert Seconds to HH MM SS.py
+Leetle Programs\2025\8-2 Time Zone Converter.py
+Leetle Programs\2025\8-4 Text Message Decoder (T9 Style).py
