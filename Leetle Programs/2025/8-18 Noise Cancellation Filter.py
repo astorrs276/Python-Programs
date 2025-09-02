@@ -1,0 +1,2 @@
+def solve(signal, threshold):
+    return signal if len(signal) <= 2 else [signal[0]] + [signal[i] if abs(signal[i] - (signal[i - 1] + signal[i + 1]) / 2) <= threshold else (signal[i - 1] + signal[i + 1]) / 2 for i in range(1, len(signal) - 1)] + [signal[-1]]

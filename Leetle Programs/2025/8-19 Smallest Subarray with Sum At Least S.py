@@ -1,0 +1,2 @@
+def solve(nums, target):
+    return 0 if nums == [] or min([min([j - i + 1 if sum(nums[i:j + 1]) == target else float('inf') for j in range(i, len(nums))]) for i in range(len(nums))]) == float('inf') else min([min([j - i + 1 if sum(nums[i:j + 1]) == target else float('inf') for j in range(i, len(nums))]) for i in range(len(nums))])
