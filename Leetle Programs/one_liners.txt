@@ -114,5 +114,14 @@ Leetle Programs\2025\7-6 Count Character Occurences.py
 Leetle Programs\2025\7-7 Reverse List.py
 Leetle Programs\2025\7-8 Is String Numeric.py
 Leetle Programs\2025\7-9 Convert Seconds to HH MM SS.py
+Leetle Programs\2025\8-11 Elevator Efficiency Optimizer.py
+Leetle Programs\2025\8-14 WiFi Signal Strength Mapper.py
+Leetle Programs\2025\8-18 Noise Cancellation Filter.py
+Leetle Programs\2025\8-19 Smallest Subarray with Sum At Least S.py
 Leetle Programs\2025\8-2 Time Zone Converter.py
+Leetle Programs\2025\8-20 K Closest Points to Origin (Deterministic).py
+Leetle Programs\2025\8-27 Maximum Product Subarray.py
+Leetle Programs\2025\8-31 Search a 2D Matrix (Row and Column Sorted).py
 Leetle Programs\2025\8-4 Text Message Decoder (T9 Style).py
+Leetle Programs\2025\8-6 Recipe Scaler.py
+Leetle Programs\2025\8-9 Pizza Slice Fairness Calculator.py

@@ -9,3 +9,4 @@ Leetle Programs\2025\6-1 Longest Palindromic Subsequence.py
 Leetle Programs\2025\6-23 Valid Phone Number.py
 Leetle Programs\2025\6-29 Longest Common Subsequence Length.py
 Leetle Programs\2025\6-3 Product of Array Except Self.py
+Leetle Programs\2025\8-27 Maximum Product Subarray.py
